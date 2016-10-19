@@ -1,0 +1,7 @@
+plugin.tx_solrfluid {
+
+	view {
+		templateRootPaths.10 = EXT:solrfluidexample/Resources/Private/Templates/
+		widget.ApacheSolrForTypo3\Solrfluid\ViewHelpers\Widget\ResultPaginateViewHelper.templateRootPath = EXT:solrfluidexample/Resources/Private/Templates/
+	}
+}

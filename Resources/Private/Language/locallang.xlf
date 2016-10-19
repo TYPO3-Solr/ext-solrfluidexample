@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-10T14:44:32Z" product-name="solrfluidexample">
+		<header/>
+		<body>
+			<trans-unit id="examplelabel" xml:space="preserve">
+				<source>Custom example label</source>
+			</trans-unit>
+
+			<trans-unit id="results_range" xml:space="preserve">
+				<source>Custom label: displaying results @resultsFrom to @resultsTo of @resultsTotal.</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
