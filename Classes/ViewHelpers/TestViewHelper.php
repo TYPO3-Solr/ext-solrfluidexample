@@ -14,31 +14,19 @@ namespace ApacheSolrForTypo3\Solrfluidexample\ViewHelpers;
  * The TYPO3 project - inspiring people to share!
  */
 
-use ApacheSolrForTypo3\Solrfluid\ViewHelpers\AbstractViewHelper;
-use TYPO3\CMS\Fluid\Core\Rendering\RenderingContextInterface;
-use TYPO3\CMS\Fluid\Core\ViewHelper\Facets\CompilableInterface;
+use ApacheSolrForTypo3\Solr\ViewHelpers\AbstractSolrFrontendViewHelper;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * Class QueryViewHelper
  *
  * @author Timo Hund <timo.hund@dkd.de>
  */
-class TestViewHelper extends AbstractViewHelper implements CompilableInterface
+class TestViewHelper extends AbstractSolrFrontendViewHelper
 {
 
-    /**
-     * Renders a test output
-     *
-     * @return string
-     */
-    public function render()
-    {
-        return self::renderStatic(
-            [],
-            $this->buildRenderChildrenClosure(),
-            $this->renderingContext
-        );
-    }
+    use CompileWithRenderStatic;
 
     /**
      * @param array $arguments
@@ -52,4 +40,6 @@ class TestViewHelper extends AbstractViewHelper implements CompilableInterface
 
         return $content;
     }
+
+
 }

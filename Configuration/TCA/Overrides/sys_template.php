@@ -7,5 +7,5 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     'solrfluidexample',
     'Configuration/TypoScript/Templates/',
-    'Search - Solrfluid use custom templates from solrfluidexample'
+    'Search - Solr use custom templates from solrfluidexample'
 );
