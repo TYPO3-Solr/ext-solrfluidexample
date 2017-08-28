@@ -1,8 +1,7 @@
-plugin.tx_solrfluid {
+plugin.tx_solr {
 
 	view {
-		partialRootPaths.10 = EXT:solrfluidexample/Resources/Private/Partials/
-		templateRootPaths.10 = EXT:solrfluidexample/Resources/Private/Templates/
-		widget.ApacheSolrForTypo3\Solrfluid\ViewHelpers\Widget\ResultPaginateViewHelper.templateRootPath = EXT:solrfluidexample/Resources/Private/Templates/
+		partialRootPaths.100 = EXT:solrfluidexample/Resources/Private/Partials/
+		templateRootPaths.100 = EXT:solrfluidexample/Resources/Private/Templates/
 	}
 }

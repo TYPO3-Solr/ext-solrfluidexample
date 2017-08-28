@@ -1,18 +1,19 @@
-{namespace s=ApacheSolrForTypo3\Solrfluid\ViewHelpers}
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	  xmlns:s="http://typo3.org/ns/ApacheSolrForTypo3/Solr/ViewHelpers/"
+	  data-namespace-typo3-fluid="true">
 <f:if condition="{configuration.insertAbove}">
-	<f:render section="paginator" arguments="{pagination: contentArguments.pagination, configuration:configuration}" />
+	<f:render section="paginator" arguments="{pagination: contentArguments.pagination, configuration:configuration, resultSet:resultSet}" />
 </f:if>
 
 <f:renderChildren arguments="{contentArguments}" />
 
 <f:if condition="{configuration.insertBelow}">
-	<f:render section="paginator" arguments="{pagination: contentArguments.pagination, configuration:configuration}" />
+	<f:render section="paginator" arguments="{pagination: contentArguments.pagination, configuration:configuration, resultSet:resultSet}"  />
 </f:if>
 
 <f:section name="paginator">
 	<f:if condition="{pagination.numberOfPages} > 1">
-		Customized Pagination
-
 		<div id="solr-pagination">
 			<ul class="pagination">
 				<f:if condition="{pagination.previousPage}">

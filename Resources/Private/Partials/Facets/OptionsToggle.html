@@ -8,7 +8,11 @@
     <ul class="facet-option-list facet-type-options fluidfacet" data-facet-name="{facet.name}" data-facet-label="{facet.label}">
         <f:for each="{facet.options}" as="option" iteration="iteration">
             <li class="facet-option{f:if(condition:'{iteration.index} > 9', then:' tx-solr-facet-hidden')}" data-facet-item-value="{option.value}">
-				+ <a class="facet solr-ajaxified" href="{s:uri.facet.addFacetItem(facet: facet, facetItem: option)}">{option.label}</a> <span class="facet-result-count">({option.documentCount})</span>
+                <f:if condition="{option.selected}">
+                    <f:then><a class="facet solr-ajaxified" href="{s:uri.facet.removeFacetItem(facet: facet, facetItem: option)}">(x) {option.label}</a></f:then>
+                    <f:else><a class="facet solr-ajaxified" href="{s:uri.facet.addFacetItem(facet: facet, facetItem: option)}">{option.label}</a></f:else>
+                </f:if>
+                <span class="facet-result-count">({option.documentCount})</span>
             </li>
         </f:for>
         <f:if condition="{facet.options -> f:count()} > 10">
