@@ -1,8 +1,8 @@
 plugin.tx_solr {
 
 	view {
-		layoutRootPaths.100 = EXT:solrfluidexample/Resources/Private/Layouts/
-		partialRootPaths.100 = EXT:solrfluidexample/Resources/Private/Partials/
-		templateRootPaths.100 = EXT:solrfluidexample/Resources/Private/Templates/
+		layoutRootPaths.10 = EXT:solrfluidexample/Resources/Private/Layouts/
+		partialRootPaths.10 = EXT:solrfluidexample/Resources/Private/Partials/
+		templateRootPaths.10 = EXT:solrfluidexample/Resources/Private/Templates/
 	}
 }

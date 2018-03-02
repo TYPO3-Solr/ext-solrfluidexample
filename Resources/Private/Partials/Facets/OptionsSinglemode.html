@@ -4,7 +4,6 @@
       data-namespace-typo3-fluid="true"
 >
 
-
     <div class="panel">
         <div class="panel-heading">
             <h3 class="facet-label panel-title">
@@ -15,7 +14,7 @@
         <div class="facet-option-list facet-type-options fluidfacet list-group panel-collapse collapse" data-facet-name="{facet.name}" data-facet-label="{facet.label}" id="facet{facet.name}">
             <f:for each="{facet.options}" as="option" iteration="iteration">
                 <div class="list-group-item facet-option{f:if(condition:'{iteration.index} > 9', then:' tx-solr-facet-hidden')}" data-facet-item-value="{option.value}">
-                    <a class="facet solr-ajaxified" href="{s:uri.facet.addFacetItem(facet: facet, facetItem: option)}">{option.label}</a> <span class="facet-result-count badge">{option.documentCount}</span>
+                    <a class="facet solr-ajaxified" href="{s:uri.facet.setFacetItem(facet: facet, facetItem: option)}">{option.label}</a> <span class="facet-result-count">({option.documentCount})</span>
                 </div>
             </f:for>
             <f:if condition="{facet.options -> f:count()} > 10">
@@ -26,7 +25,5 @@
                 </div>
             </f:if>
         </div>
-
     </div>
-
 </html>

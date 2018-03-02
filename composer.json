@@ -22,7 +22,7 @@
     "forum": "http://forum.typo3.org/index.php/f/53/"
   },
   "require": {
-    "php": ">=5.5.0",
+    "php": ">=7.0.0",
     "typo3/cms-core": ">=8.7.0"
   },
   "require-dev": {
