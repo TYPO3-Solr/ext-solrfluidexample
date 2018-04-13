@@ -9,6 +9,7 @@
 			data-document-id="{document.id}"
 			data-document-url="{document.url}"
 		>
+
 		<f:if condition="{document.isElevated}">
 			<div class="results-elevated-label"><s:translate key="sponsored"/></div>
 		</f:if>
@@ -41,7 +42,11 @@
 					</ul>
 				</p>
 			</f:if>
-			<s:debug.documentScoreAnalyzer document="{document}" />
+
+			Solr Scoring Explain:
+			<pre>
+				<span style="font-size: 7pt;"><c:debug.explain resultSet="{resultSet}" result="{document}"/></span>
+			</pre>
 		</div>
 	</div>
 
