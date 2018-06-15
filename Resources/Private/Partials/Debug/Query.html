@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:solrdebug="http://typo3.org/ns/ApacheSolrForTypo3/Solrdebugtools/ViewHelpers">
+
+<f:section name="Query">
+
+	<ul class="nav nav-pills">
+		<li class="active"><a  href="#solrquery" data-toggle="tab">Solr Query</a></li>
+	</ul>
+
+	<div class="explain-tabs tab-content clearfix">
+		<div class="tab-pane active" id="solrquery">
+			<a href="{solrdebug:debug.queryUrl(resultSet: resultSet)}"><div class="solrquery"><solrdebug:debug.queryUrl resultSet="{resultSet}"/></div></a>
+
+		</div>
+
+	</div>
+
+</f:section>

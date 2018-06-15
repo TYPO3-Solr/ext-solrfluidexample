@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	  xmlns:solrdebug="http://typo3.org/ns/ApacheSolrForTypo3/Solrdebugtools/ViewHelpers"
+>
+
+<f:section name="Explain">
+	<solrdebug:debug.explain resultSet="{resultSet}" result="{document}">
+
+		<ul class="nav nav-pills">
+			<li class="active"><a  href="#fieldimpact_{document.type}_{document.uid}" data-toggle="tab">Field Impact</a></li>
+			<li><a href="#rawexplain_{document.type}_{document.uid}" data-toggle="tab">Raw Explain</a></li>
+		</ul>
+
+		<div class="explain-tabs tab-content clearfix">
+			<div class="tab-pane active" id="fieldimpact_{document.type}_{document.uid}">
+				<svg viewBox="0 0 32 32" class="explain">
+					<text class="score" x="6"  y="-14" transform="rotate(90)">{explainResult.score}</text>
+
+					<f:for each="{explainResult.impact}" as="fieldImpact" key="fieldName" iteration="iterator">
+						<circle cx="16" cy="16" r="16" class="item{iterator.cycle}" stroke-dasharray="{fieldImpact.impact} {fieldImpact.rest}" stroke-dashoffset="{fieldImpact.offset}"></circle>
+					</f:for>
+
+				</svg>
+
+				<ul class="explainlist">
+					<f:for each="{explainResult.impact}" as="fieldImpact" key="fieldName" iteration="iterator">
+						<li><span class="explainlabel item{iterator.cycle}">&nbsp;</span> {fieldName}: {fieldImpact.impact} %</li>
+					</f:for>
+				</ul>
+			</div>
+			<div class="tab-pane" id="rawexplain_{document.type}_{document.uid}">
+				<pre><span style="font-size: 7pt;">{explainText}</span></pre>
+			</div>
+		</div>
+	</solrdebug:debug.explain>
+</f:section>

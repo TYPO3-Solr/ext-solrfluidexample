@@ -43,10 +43,8 @@
 				</p>
 			</f:if>
 
-			Solr Scoring Explain:
-			<pre>
-				<span style="font-size: 7pt;"><c:debug.explain resultSet="{resultSet}" result="{document}"/></span>
-			</pre>
+			<!-- render debugging information: solrdebugtools is required! -->
+			<!-- <f:render partial="Debug/Explain" arguments="{resultSet:resultSet, document: document}" section="Explain"/> -->
 		</div>
 	</div>
 

@@ -6,7 +6,8 @@
 <f:layout name="Split"/>
 
 <f:section name="top">
-	Used solr query: <a href="{c:debug.queryUrl(resultSet: resultSet)}"><pre><c:debug.queryUrl resultSet="{resultSet}"/></pre></a>
+	<!-- render debugging information: solrdebugtools is required! -->
+	<!-- <f:render partial="Debug/Query" arguments="{resultSet:resultSet}" section="Query"/> -->
 </f:section>
 <f:section name="content">
 	<div>Solrfluid Customized Example Template</div>
