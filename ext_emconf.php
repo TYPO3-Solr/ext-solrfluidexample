@@ -2,7 +2,7 @@
 $EM_CONF[$_EXTKEY] = array(
     'title' => 'Apache Solr for TYPO3 - Fluid Frontend Customizing',
     'description' => 'This extension shows, how to customize solrfluid with custom templates',
-    'version' => '3.2.0',
+    'version' => '3.3.0',
     'state' => 'stable',
     'category' => 'plugin',
     'author' => 'Timo Hund, Markus Friedrich',
@@ -17,9 +17,9 @@ $EM_CONF[$_EXTKEY] = array(
         'depends' => array(
             'scheduler' => '',
             'solr' => '8.0.0-',
-            'extbase' => '8.7.0-9.1.99',
-            'fluid' => '8.7.0-9.1.99',
-            'typo3' => '8.7.0-9.1.99'
+            'extbase' => '8.7.0-9.3.99',
+            'fluid' => '8.7.0-9.3.99',
+            'typo3' => '8.7.0-9.3.99'
         ),
         'conflicts' => array(),
         'suggests' => array(
